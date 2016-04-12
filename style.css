@@ -1,0 +1,365 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, p, span, li, input {
+	font-family: 'lato';
+}
+
+h2 {
+  font-size: 350%;
+  letter-spacing: 2px;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header {
+  padding: 0 .5em .5em;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.25em;
+  color: hsla(0, 0%, 95%, 1);
+  letter-spacing: 3px;
+}
+
+header span {
+  font-family: 'playfair display';
+  color: hsla(354, 78%, 68%, 1);
+  font-size: 2em;
+  vertical-align: -.15em;
+}
+
+header div {
+  padding: 1.1em 1em 0 0;
+}
+
+header div input {
+  font-size: 1.1em;
+  font-weight: 400;
+  border: none;
+  padding: .3em .8em;
+  outline: none;
+  background-color: hsla(0, 0%, 5%, .2);
+  color: hsla(0, 0%, 95%, 1);
+  border: 1px solid hsla(0, 0%, 100%, .3);
+}
+
+header div input:first-of-type {
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+}
+
+header div input:last-of-type {
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+
+#title {
+	padding: 32vh 0 22vh;
+}
+
+#title p, #title span {
+	text-align: center;
+	margin: 0;
+	letter-spacing: 4px;
+  text-shadow: 0 0 15px hsla(0, 0%, 0%, 1);
+}
+
+#title p {
+	font-family: 'great vibes';
+	font-size: 800%;
+  font-weight: 500;
+  color: hsla(0, 0%, 95%, 1);
+}
+
+#title span {
+	font-family: 'lato';
+	font-size: 200%;
+  position: absolute;
+  top: 55%;
+  left: 43%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-97%) translateY(-105%) rotate(0deg);
+  padding: 20px;
+  font-size: 145%;
+}
+
+#title span:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(12%) translateY(-22%) rotate(0deg);
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 310px;
+  height: 220px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-30%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.title h2 {
+  margin-top: 0;
+}
+
+#slide1 .title {
+	width: 100%;
+	padding: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+#slide1 {
+  padding: 15vh 10% 35vh;
+}
+
+#slide1 .title {
+	display: flex;
+	justify-content: space-around;
+  margin-bottom: 6em;
+}
+
+#slide1 .title span{
+	font-size: 5em;
+	font-family: 'lato';
+	color: white;
+}
+
+#slide1 p {
+  color: hsla(0, 0%, 95%, 1);
+  text-align: center;
+  margin: 0;
+}
+
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("img/photo-5.jpg");
+   background-attachment: fixed;  
+}
+
+#slide1:before {
+  background-image: url("img/fresno-05.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+#slide2 {
+  padding: 0;
+}
+
+#slide3 {
+  padding-top: 0;
+}
+
+#slide3:before {
+  background-image: url("img/photo-3.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+#slide3 .title {
+  width: 65%;
+}
+
+#slide3 .title ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#slide3 .title li {
+  width: 10em;
+  margin-bottom: 1em;
+  transition: .7s ease-in-out;
+  border-right: 1px solid black;
+  text-align: right;
+  padding: 7px 10px;
+  font-size: 110%;
+}
+
+#slide3 li:nth-of-type(1):hover {
+    border-right: 425px solid hsla(354, 78%, 68%, .7);
+}
+
+#slide3 li:nth-of-type(2):hover {
+  border-right: 425px solid hsla(140, 64%, 66%, .7);
+}
+
+#slide3 li:nth-of-type(3):hover {
+    border-right: 400px solid hsla(235, 58%, 78%, .7);
+}
+
+#slide3 li:nth-of-type(4):hover {
+  border-right: 100px solid hsla(338, 100%, 77%, .7);
+}
+
+#slide3 li:nth-of-type(5):hover {
+  border-right: 200px solid hsla(200, 87%, 77%, .7);
+}
+
+#slide4 {
+  background: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#slide4 h2 {
+  font-size: 450%;
+  font-family: 'Great Vibes';
+  margin-top: .4em;
+  margin-bottom: .3em;
+  letter-spacing: 4px;
+}
+
+footer.slide {
+  padding: 0;
+}
+
+#slide4 aside {
+  width: 7em;
+  height: 7em;
+  border: 13px solid hsla(354, 98%, 68%, 1);
+  background-color: hsla(0, 0%, 5%, .1);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent; 
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#slide4 aside div {
+  width: 5em;
+  height: 5em;
+  border: 7px solid hsla(200, 87%, 77%, 1);
+  border-radius: 100%;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#slide4 aside div article {
+    width: 3em;
+    height: 3em;
+    border: 1px solid hsla(140, 64%, 66%, 1);
+    border-radius: 100%;
+    animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: hsla(140, 64%, 66%, .1);
+  }
+  50%  {
+    background-color: hsla(140, 64%, 66%, 1);
+  }
+  100% {
+    background-color: hsla(140, 64%, 66%, .1);
+  }
+}
+
+#slide4 p {
+  color: hsla(0, 0%, 85%, 1);
+}
